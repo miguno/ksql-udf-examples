@@ -11,6 +11,9 @@ import io.confluent.ksql.function.udf.UdfDescription;
 @UdfDescription(name = "multiply", description = "multiplies 2 numbers")
 public class MultiplyUdf {
 
+  // See https://docs.confluent.io/current/ksql/docs/developer-guide/udf.html#null-handling
+  // for more information how your UDF should handle `null` input.
+
   @Udf(description = "multiply two non-nullable INTs.")
   public long multiply(final int v1, final int v2) {
     return v1 * v2;

@@ -1,7 +1,9 @@
 # KSQL UDF/UDAF Examples (Tutorial)
 
-Example implementations of [KSQL](https://github.com/confluentinc/ksql) UDFs and UDAFs
-(user-defined functions and user-defined aggregate functions).
+Example implementations of
+[UDFs](https://docs.confluent.io/current/ksql/docs/developer-guide/udf.html) (user-defined functions, like `FLOOR`, `MASK`) and
+[UDAFs](https://docs.confluent.io/current/ksql/docs/developer-guide/udf.html) (user-defined aggregate functions, like `SUM`, `COUNT`)
+for [KSQL](https://github.com/confluentinc/ksql).
 
 [![Build Status](https://travis-ci.org/miguno/ksql-udf-examples.svg?branch=master)](https://travis-ci.org/miguno/ksql-udf-examples)
 [![License](http://img.shields.io/:license-Apache%202-red.svg)](http://www.apache.org/licenses/LICENSE-2.0.txt)
@@ -36,7 +38,9 @@ Requirements to locally build, test, package the UDF/UDAF examples:
 # Examples
 
 To write UDFs/UDAFs ([details](https://docs.confluent.io/current/ksql/docs/developer-guide/udf.html)), you can use
-the following examples as a starting point:
+the following examples as a starting point. Simply [fork](https://github.com/miguno/ksql-udf-examples/fork) this
+repository and add or modify the examples as you see fit. Of course, you can also contribute examples to this
+repository by sending a [pull request](https://github.com/miguno/ksql-udf-examples/pulls).
 
 | Example                                  | Type      | Description                                           |
 | ---------------------------------------- | --------- | ----------------------------------------------------- |
@@ -71,12 +75,12 @@ You can verify that the UDFs/UDAFs are available for use by running `SHOW FUNCTI
 To use the UDFs/UDAFs in KSQL ([details]()):
 
 ```sql
-CREATE STREAM numbers (b1 BIGINT, b2 BIGINT, d1 DOUBLE, d2 DOUBLE)
+CREATE STREAM numbers (b1 BIGINT, b2 BIGINT, d1 DOUBLE, d2 DOUBLE, v VARCHAR)
   WITH (VALUE_FORMAT = 'JSON', KAFKA_TOPIC = 'numbers');
 
 SELECT MULTIPLY(b1, b2), MULTIPLY(d1, d2) FROM numbers;
 
-SELECT SUM_NULL(b1) FROM numbers;
+SELECT SUM_NULL(b1), SUM_NULL(d1), SUM_NULL(v) FROM numbers;
 ```
 
 

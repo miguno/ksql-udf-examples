@@ -16,6 +16,9 @@ import io.confluent.ksql.function.udaf.UdafFactory;
 @UdafDescription(name = "sum_null", description = "sums numbers, treats null as 0 (zero)")
 public class SumUdaf {
 
+  // See https://docs.confluent.io/current/ksql/docs/developer-guide/udf.html#null-handling
+  // for more information how your UDAF should handle `null` input.
+
   @UdafFactory(description = "sums INT numbers")
   public static TableUdaf<Integer, Long> createSumInt() {
     return new TableUdaf<Integer, Long>() {
