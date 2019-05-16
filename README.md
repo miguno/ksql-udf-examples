@@ -70,7 +70,8 @@ $ mvn clean package
 
 To deploy the packaged UDFs/UDAFs to KSQL servers, refer to the
 [KSQL documentation on UDF/UDAF](https://docs.confluent.io/current/ksql/docs/developer-guide/udf.html#deploying).
-You can verify that the UDFs/UDAFs are available for use by running `SHOW FUNCTIONS`.
+You can verify that the UDFs/UDAFs are available for use by running `SHOW FUNCTIONS`, and show the details of
+any specific function with `DESCRIBE FUNCTION <name>`.
 
 To use the UDFs/UDAFs in KSQL ([details]()):
 
