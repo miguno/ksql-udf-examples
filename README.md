@@ -89,7 +89,8 @@ SELECT SUM_NULL(b1), SUM_NULL(d1), SUM_NULL(v) FROM numbers;
 
 # Want to Learn More?
 
-Head over to the [KSQL documentation](https://docs.confluent.io/current/ksql/).
+* Head over to the [KSQL documentation](https://docs.confluent.io/current/ksql/).
+* Mitch Seymour's talk [The Exciting Frontier of Custom KSQL Functions](https://kafka-summit.org/sessions/exciting-frontier-custom-ksql-functions/) ([slides](http://blog.mitchseymour.com/presentations/kafka-summit-london-2019/slides/#/)), Kafka Summit London 2019, which includes UDF usage for machine learning as well as a POC for writing UDFs in non-JVM languages like Ruby, Python
 
 
 <a name="License"></a>
