@@ -25,7 +25,8 @@ Table of Contents
 
 Compatible [KSQL](https://github.com/confluentinc/ksql) versions:
 
-* The examples in this repository are built against KSQL 5.2.1 (see [pom.xml](pom.xml#L28)).
+* The examples in this repository are built against KSQL 5.3.1 (see [pom.xml](pom.xml#L28)) for Apache Kafka 2.3.1
+  and Confluent Platform 5.3.1.
 
 Requirements to locally build, test, package the UDF/UDAF examples:
 
