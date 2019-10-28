@@ -24,7 +24,7 @@
   </repositories>
 
   <properties>
-    <assertj.version>3.3.0</assertj.version>
+    <assertj.version>3.11.1</assertj.version>
     <confluent.version>5.3.1</confluent.version>
     <exec.mainClass>com.miguno.ksql.udfdemo.ThisIsIgnored</exec.mainClass>
     <java.version>1.8</java.version>
