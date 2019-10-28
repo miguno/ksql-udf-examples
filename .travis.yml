@@ -1,7 +1,6 @@
 language: java
 
 jdk:
-  - oraclejdk8
   - openjdk8
 
 # Workaround for Travis CI issue 5227, which results in a buffer overflow
